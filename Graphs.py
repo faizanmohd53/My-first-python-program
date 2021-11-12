@@ -4,8 +4,6 @@ Created on Mon Nov  1 19:53:13 2021
 
 @author: FAIZAN
 """
-
-
 import matplotlib.pyplot as plt
 #-----------------------------------GRAPHS---------------------------------
 
@@ -15,20 +13,21 @@ import numpy as np
  
 city=['Delhi','Beijing','Washington','Tokyo','Moscow']
 Happiness_Index=[60,40,70,65,85]
- 
+type(city)
+
 plt.bar(city,Happiness_Index,color='pink',edgecolor='red')
-plt.xlabel('City', fontsize=16)
+plt.xlabel('City', fontsize=18)
 plt.ylabel('Happiness_Index', fontsize=16)
 plt.title('Barchart - Happiness index across cities',fontsize=20)
 
 #Horizontal Bar Chart
- 
+
 city=['Delhi','Beijing','Washington','Tokyo','Moscow']
 Happiness_Index=[60,40,70,65,85]
  
 plt.barh(city,Happiness_Index,color='blue',edgecolor='black')
-plt.xlabel('Happiness_Index', fontsize=16)
-plt.ylabel('City', fontsize=16)
+plt.xlabel('Happiness_Index', fontsize=18)
+plt.ylabel('City', fontsize=18)
 plt.title('Horizontal Barchart - Happiness index across cities',fontsize=20)
 
 #Stacked Bar Chart in Python with legends:
@@ -39,7 +38,7 @@ Happiness_Index_Male=[60,40,70,65,85]
 Happiness_Index_Female=[30,60,70,55,75]
  
 plt.bar(city,Happiness_Index_Male,color='blue',edgecolor='black')
-plt.bar(city,Happiness_Index_Female,color='pink',edgecolor='black',bottom=Happiness_Index_Male)
+plt.bar(city,Happiness_Index_Female,color='green',edgecolor='black',bottom=Happiness_Index_Male)
 #bar() function plots the Happiness_Index_Female on top of Happiness_Index_Male with the help of 
 #argument  bottom=Happiness_Index_Male.
 plt.xlabel('City', fontsize=16)
@@ -100,7 +99,7 @@ box_plot_data=[value1,value2,value3,value4]
 box=plt.boxplot(box_plot_data,vert=0,patch_artist=True,
                 labels=['course1','course2','course3','course4'],)
 #Adding argument vert =0 plots the horizontal box plot.
-colors = ['cyan', 'lightblue', 'lightgreen', 'tan']
+colors = ['blue', 'lightblue', 'lightgreen', 'yellow']
 for patch, color in zip(box['boxes'], colors):
     patch.set_facecolor(color)
 #Colors array takes four different colors and passes them to four different boxes of the boxplot
